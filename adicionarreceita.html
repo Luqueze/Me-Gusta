@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metatags e outros cabeçalhos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Livro de Receitas</title>
+    <style>
+        /* Estilos CSS */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /*  estilos adicionados para o formulário de envio de receitas */
+        .formulario {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .formulario h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Adicionando estilos para o filtro de receitas */
+        .filtro {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Livro de Receitas</h1>
+        <p>Compartilhe suas receitas deliciosas!</p>
+    </header>
+
+    <!-- Formulário de envio de receitas para RF-05 e RF-06 -->
+    <div class="formulario">
+        <h2>Compartilhe sua Receita</h2>
+        <form>
+            <label for="nome">Nome da Receita:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="ingredientes">Ingredientes:</label>
+            <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+
+            <label for="modoPreparo">Modo de Preparo:</label>
+            <textarea id="modoPreparo" name="modoPreparo" rows="4" required></textarea>
+
+            <button type="submit">Enviar Receita</button>
+        </form>
+    </div>
+
+    <!-- Filtro de receitas para RF-12 e RF-13 -->
+    <div class="filtro">
+        <h2>Filtrar Receitas</h2>
+        <label for="filtroCategoria">Categoria:</label>
+        <select id="filtroCategoria" name="filtroCategoria">
+            <option value="categoria1">Categoria 1</option>
+            <option value="categoria2">Categoria 2</option>
+            <!-- Adicione mais opções de categoria conforme necessário -->
+        </select>
+
+        <label for="filtroOrdem">Ordenar por:</label>
+        <select id="filtroOrdem" name="filtroOrdem">
+            <option value="alfabetica">Ordem Alfabética</option>
+            <option value="categoria">Por Categoria</option>
+            <!-- Adicione mais opções de ordenação conforme necessário -->
+        </select>
+    </div>
+
+    <!-- Outras seções de receitas, feed e funcionalidades -->
+
+    <footer>
+        <!-- Rodapé -->
+    </footer>
+</body>
+</html>
