@@ -4,29 +4,38 @@
     <!-- Metatags e outros cabeçalhos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Livro de Receitas</title>
+    <title>Me Gusta</title>
     <style>
         /* Estilos CSS */
-
+        
+        /* Paleta de Cores */
+        :root {
+            --cor-amarela: #FFE330;
+            --cor-laranja-claro: #FFB60D;
+            --cor-laranja: #FA7D00;
+            --cor-vermelha: #D94F21;
+            --cor-vermelha-escura: #C71616;
+        }
+    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-
+    
         header {
-            background-color: #333;
+            background-color: var(--cor-vermelha); /* Usando a cor vermelha escura no cabeçalho */
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-
+    
         h1 {
             margin: 0;
         }
-
-        /*  estilos adicionados para o formulário de envio de receitas */
+    
+        /* Estilos adicionados para o formulário de envio de receitas */
         .formulario {
             background-color: #fff;
             margin: 20px;
@@ -34,17 +43,17 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
+    
         .formulario h2 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-
+    
         label {
             display: block;
             margin-bottom: 5px;
         }
-
+    
         input[type="text"],
         textarea {
             width: 100%;
@@ -53,20 +62,20 @@
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-
+    
         button {
-            background-color: #333;
+            background-color: var(--cor-vermelha); /* Usando a cor vermelha escura no botão */
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
         }
-
+    
         button:hover {
             background-color: #555;
         }
-
+    
         /* Adicionando estilos para o filtro de receitas */
         .filtro {
             background-color: #fff;
@@ -76,10 +85,11 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
+    
 </head>
 <body>
     <header>
-        <h1>Meu Livro de Receitas</h1>
+        <h1>Me Gusta</h1>
         <p>Compartilhe suas receitas deliciosas!</p>
     </header>
 
