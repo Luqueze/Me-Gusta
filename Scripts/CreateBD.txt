@@ -1,0 +1,81 @@
+CREATE TABLE Usuario(
+ID INT PRIMARY KEY,
+NOME VARCHAR(10),
+SOBRENOME VARCHAR(10),
+GEN CHAR,
+IDADE INT,
+EMAIL VARCHAR(50),
+SENHA VARCHAR(50),
+FOREIGN KEY (ID) REFERENCES UserRes(UserId),
+FOREIGN KEY (ID) REFERENCES UserSel(UserId),
+FOREIGN KEY (ID) REFERENCES UserDest(UserId),
+FOREIGN KEY (ID) REFERENCES UserRec(UserId),
+FOREIGN KEY (ID) REFERENCES NotasRec(UserId)
+);
+CREATE TABLE UserRes(
+UserId INT,
+IngId INT,
+CONSTRAINT pk primary key(UserId,IngId)
+);
+CREATE TABLE UserDest(
+UserId INT,
+IngId INT,
+CONSTRAINT pk primary key(UserId,IngId)
+);
+CREATE TABLE UserSel(
+UserId INT,
+IngId INT,
+CONSTRAINT pk primary key(UserId,IngId)
+);
+CREATE TABLE UserRec(
+UserId INT,
+RecId INT,
+CONSTRAINT pk primary key(UserId,RecId)
+);
+CREATE TABLE NotasRec(
+UserId INT,
+RecId INT,
+Nota INT,
+CONSTRAINT pk primary key(UserId,RecId)
+);
+
+CREATE TABLE Ingredientes(
+Id INT PRIMARY KEY,
+Nome VARCHAR(10),
+Categoria VARCHAR(10),
+UndMed VARCHAR(2),
+FOREIGN KEY (Id) REFERENCES IngNut(IngId)
+);
+
+CREATE TABLE RecIng(
+RecId INT,
+IngId INT,
+CONSTRAINT pk primary key(RecId,IngId)
+);
+
+CREATE TABLE Receitas(
+Id INT PRIMARY KEY,
+Titulo VARCHAR(20),
+SubTitulo VARCHAR(50),
+Dificuldade VARCHAR(10),
+Preparo VARCHAR(200),
+Porcoes INT,
+Cal INT,
+Custo NUMERIC,
+FOREIGN KEY (Id) REFERENCES RecIng(RecId)
+);
+CREATE TABLE Anotacao(
+Id INT PRIMARY KEY,
+Nota VARCHAR(200),
+Cor INT,
+FOREIGN KEY (Id) REFERENCES NotMur(NotId)
+);
+CREATE TABLE Mural(
+Id INT PRIMARY KEY,
+FOREIGN KEY (Id) REFERENCES NotMur(MurId)
+);
+CREATE TABLE NotMur(
+MurId INT,
+NotId INT,
+CONSTRAINT pk primary key(MurId,NotId)
+)
